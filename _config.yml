@@ -1,5 +1,45 @@
-title: Shirish Patel
-logo: https://raw.githubusercontent.com/Shiripatel/portfolio/main/assets/Picture1.png
-#description: text below image
-show_downloads: true
-theme: jekyll-theme-minimal
+title: Shirish Patel Portfolio
+description: Business Analytics | Digital Transformation | Finance
+theme: jekyll-theme-cayman
+
+# Style and colors
+style:
+  background_color: "#ffffff" # White background
+  text_color: "#333333"       # Dark gray text
+  link_color: "#007acc"       # Blue links
+  button_color: "#007acc"     # Matching buttons
+
+# Fonts
+font_family: "Lato, Arial, sans-serif"
+
+# Social Links
+social_links:
+  linkedin: https://linkedin.com/in/shirishpatel
+  github: https://github.com/Shiripatel
+  email: mailto:Shirishpatel1611@gmail.com
+
+# Navigation
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
+  - contact.md
+
+# Favicon
+favicon: /favicon.ico
+
+# Footer
+footer:
+  content: © 2025 Shirish Patel | Powered by GitHub Pages
+  show_social_links: true
+
+# Custom CSS for better formatting
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-assets
+
+assets:
+  css:
+    - assets/css/style.css
