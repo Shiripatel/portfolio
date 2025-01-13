@@ -1,6 +1,5 @@
 Shirish Patel
-Business Analytics | Supply Chain Management | Digital Transformation
-
+Business Analytics | Digital Transformation & Finance
 📍 Chicago, IL | 📧 Shirishpatel1611@gmail.com | ☎️ (+1) 872-288-4166
 🔗 LinkedIn | 🔗 GitHub
 
@@ -11,18 +10,12 @@ Education
 MS – Business Analytics | DePaul University, Chicago (2024 – 2025)
 MBA – Systems & Finance | Symbiosis International University, India (2014 – 2016)
 BE – Electronics & Communication | Gujarat Technological University, India (2009 – 2013)
+
 Professional Experience
-Deloitte
-Manager | 08/2021 – 09/2024
-
-Protiviti
-Assistant Manager | 02/2019 – 07/2021
-
-Grant Thornton
-Senior Consultant | 04/2016 – 01/2019
-
-DePaul University
-Student Data Analyst | 10/2024 – Present
+DePaul University - Student Data Analyst | 10/2024 – Present
+Deloitte - Manager | 08/2021 – 12/2024
+Protiviti - Assistant Manager | 02/2019 – 07/2021
+Grant Thornton - Senior Consultant | 04/2016 – 01/2019
 
 Key Projects
 Supply Chain Process Transformation:
