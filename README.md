@@ -1,7 +1,3 @@
-# Shirish Patel
-
-Welcome to my portfolio and resume webpage! This repository contains all the files for my personal website, showcasing my skills, education, experience, and key projects.
-
 ## 📄 **About Me**
 I am a data-driven professional with over 8 years of experience in business analytics, supply chain management, and digital transformation. My expertise includes designing end-to-end supply chain processes, implementing ERP systems, and building actionable insights through advanced analytics.
 
@@ -11,7 +7,7 @@ I am a data-driven professional with over 8 years of experience in business anal
 
 | Degree                          | Institution                            | Year         |
 |---------------------------------|----------------------------------------|--------------|
-| **MS in Business Analytics**    | DePaul University, Chicago             | 2024 – 2025  |
+| **MS in Business Analytics**    | DePaul University, Chicago                         | 2024 – 2025  |
 | **MBA – Systems & Finance**     | Symbiosis International University, India | 2014 – 2016  |
 | **BE – Electronics & Communication** | Gujarat Technological University, India | 2009 – 2013  |
 
