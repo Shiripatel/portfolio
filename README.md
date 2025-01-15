@@ -5,8 +5,8 @@ I am a data-driven professional with over 8 years of experience in business anal
 
 ## 🎓 **Education**
 
-| Degree                          | Institution                            | Year         |
-|---------------------------------|----------------------------------------|--------------|
+| Degree                          | Institution                                         | Year         |
+|---------------------------------|----------------------------------------              |--------------|
 | **MS in Business Analytics**    | DePaul University, Chicago                         | 2024 – 2025  |
 | **MBA – Systems & Finance**     | Symbiosis International University, India | 2014 – 2016  |
 | **BE – Electronics & Communication** | Gujarat Technological University, India | 2009 – 2013  |
