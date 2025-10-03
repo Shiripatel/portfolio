@@ -1,1 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shirish Patel — Audit & Risk</title>
+  <meta name="description" content="Shirish Patel — Audit, Risk Management, Telecom Business Analyst, Data & Automation" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#3b82f6; --glass: rgba(255,255,255,0.03);
+      --maxw:980px; --radius:12px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#061026 0%,var(--bg) 100%);color:#e6eef8;min-height:100vh;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;color:white;flex-shrink:0}
+    .hero h1{margin:0;font-size:1.6rem}
+    .hero p{margin:6px 0;color:var(--muted)}
+    nav{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;font-size:0.9rem}
+    nav a:hover{background:var(--glass);color:var(--accent)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:22px}
+    main{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
+    aside{padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;height:max-content}
+    section + section{margin-top:14px}
+    h2{margin:0 0 10px 0;font-size:1.05rem}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:0.85rem}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);margin-bottom:10px}
+    .project h3{margin:0;font-size:1rem}
+    .project p{margin:6px 0;color:var(--muted);font-size:0.92rem}
+    .meta{color:var(--muted);font-size:0.85rem}
+    footer{margin-top:18px;color:var(--muted);text-align:center;font-size:0.9rem}
+    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:white;text-decoration:none;font-weight:600}
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr; }
+      aside{order:2}
+      header{flex-direction:row;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">SP</div>
+      <div class="hero">
+        <h1>Shirish Patel</h1>
+        <p>Audit & Risk Management • Telecom Business Analyst • Data & Automation</p>
+        <nav aria-label="Primary">
+          <a href="#about">Bio</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="grid" role="region">
+      <main id="main-column">
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About Me</h2>
+          <p style="color:var(--muted)">
+            <!-- Replace this placeholder text with your short bio (2–3 sentences). -->
+            I’m an audit & risk professional with experience in ERP reviews, SOX, telecom billing and revenue assurance. I apply data analytics and automation to improve controls, accuracy, and operational efficiency.
+          </p>
+          <p><a class="btn" href="resume.pdf" download>Download Resume (PDF)</a></p>
+
+          <section id="projects">
+            <h2>Projects</h2>
+            <article class="project">
+              <h3>Revenue Assurance — Billing Reconciliation</h3>
+              <p class="meta">Telecom | Python, SQL, Excel | Link: <a href="#" style="color:var(--accent)">repo / demo</a></p>
+              <p>Automated billing vs. usage reconciliation reducing monthly leakage and manual effort.</p>
+            </article>
+
+            <article class="project">
+              <h3>ERP Controls Automation</h3>
+              <p class="meta">Finance Controls | Data Validation</p>
+              <p>Designed automated tests for AP/AR/GL that cut sampling time and improved audit coverage.</p>
+            </article>
+          </section>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="project">
+            <h3>Senior Audit & Risk Analyst — Company Name</h3>
+            <p class="meta">2021 — Present</p>
+            <p class="meta">Key: SOX testing, ERPs, automation, telecom billing reviews.</p>
+          </div>
+          <div class="project">
+            <h3>Audit Consultant — Firm Name</h3>
+            <p class="meta">2017 — 2021</p>
+            <p class="meta">Conducted internal audits, process redesign, and data analytics engagements.</p>
+          </div>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          <p class="meta">Degree, University — Year</p>
+        </section>
+      </main>
+
+      <aside aria-label="Sidebar">
+        <section id="skills">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="chip">SOX</span>
+            <span class="chip">ERP Controls</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Python</span>
+            <span class="chip">Data Analytics</span>
+            <span class="chip">Revenue Assurance</span>
+            <span class="chip">Power BI</span>
+          </div>
+        </section>
+
+        <section id="contact" style="margin-top:12px">
+          <h2>Contact</h2>
+          <p class="meta">GitHub: <a href="https://github.com/yourusername" style="color:var(--accent)">yourusername</a></p>
+          <p class="meta">LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" style="color:var(--accent)">yourprofile</a></p>
+          <p class="meta">Email: <a href="mailto:you@example.com" style="color:var(--accent)">you@example.com</a></p>
+        </section>
+
+        <section id="interests" style="margin-top:12px">
+          <h2>Interests</h2>
+          <p class="meta">Data Science · Automation · Machine Learning · Prompt Engineering</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Shirish Patel — Built for GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    // small script: set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
 
