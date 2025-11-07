@@ -25,9 +25,10 @@
     .icons a { color: var(--muted); font-size: 14px; text-decoration: none; padding:10px 12px; border-radius:8px; background:#191919; border:1px solid #242424 }
     .icons a:hover { color: var(--gold); border-color:#3a3a3a }
 
-    .certs{width:100%;margin-top:16px;padding:14px;border:1px solid #242424;background:#191919;border-radius:12px}
+    .certs{width:100%;margin-top:16px;padding:14px;border:1px solid #242424;background:#191919;border-radius:12px;text-align:center}
     .certs h4{margin:0 0 10px;font-size:14px;color:#e6e6e6}
-    .certs ul{margin:0;padding-left:18px;color:#cfcfcf;font-size:13px;line-height:1.6}
+    .badge-list{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .badge-list span{background:rgba(255,204,51,0.1);border:1px solid var(--gold);color:var(--gold);font-size:12px;padding:4px 8px;border-radius:8px}
 
     .main { width: 72%; padding: 30px 28px 80px; }
     .navbar { position: sticky; top: 16px; display: flex; justify-content: flex-end; margin-bottom: 22px; z-index: 20; }
@@ -42,11 +43,15 @@
     .timeline{position:relative;padding-left:36px}
     .timeline:before{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:#2a2a2a}
     .titem{position:relative;margin-bottom:22px;padding:16px;border:1px solid #232323;background:#151515;border-radius:14px;display:flex;align-items:flex-start;gap:12px}
-    .titem img.icon{width:32px;height:32px;object-fit:contain;border-radius:6px}
+    .titem img.icon{width:40px;height:40px;object-fit:contain;border-radius:8px;background:#111;border:1px solid #2a2a2a;padding:4px}
     .tcontent{flex:1}
     .tcontent h3{font-size:16px;margin:0 0 4px}
     .tcontent small{color:#999}
     .tcontent ul{margin-top:8px;padding-left:18px;color:#cfcfcf}
+
+    form label{display:block;font-size:14px;color:#ddd;margin-bottom:8px}
+    form input, form textarea{width:100%;display:block;margin-bottom:12px;padding:8px;border-radius:6px;border:1px solid #333;background:#111;color:#eee}
+    form button{padding:10px 18px;background:var(--gold);color:#111;border:none;border-radius:8px;cursor:pointer;font-weight:600}
 
     @media(max-width:1100px){body{flex-direction:column}.sidebar{width:auto;margin:16px}.main{width:auto;padding:20px}}
   </style>
@@ -77,14 +82,14 @@
 
     <div class="certs">
       <h4>Certifications</h4>
-      <ul>
-        <li>CISA (in progress)</li>
-        <li>CIA (in progress)</li>
-        <li>Microsoft Fabric DP‑600 / DP‑700 (prep)</li>
-        <li>Databricks Fundamentals</li>
-        <li>AWS Cloud Practitioner (prep)</li>
-        <li>Snowflake Advanced Analytics</li>
-      </ul>
+      <div class="badge-list">
+        <span>CISA (in progress)</span>
+        <span>CIA (in progress)</span>
+        <span>Microsoft Fabric DP‑600 / DP‑700 (prep)</span>
+        <span>Databricks Fundamentals</span>
+        <span>AWS Cloud Practitioner (prep)</span>
+        <span>Snowflake Advanced Analytics</span>
+      </div>
     </div>
   </aside>
 
@@ -170,28 +175,9 @@
       <h2>Education</h2>
       <div class="bar"></div>
       <div class="timeline">
-        <div class="titem">
-          <div class="tcontent">
-            <h3>MS — Business Analytics</h3>
-            <small>DePaul University · 2024 — 2025</small>
-            <ul>
-              <li>Projects: Blue Demon Engagement analytics; FSL Council insights.</li>
-              <li>Stack: Python, SQL, Power BI/Tableau, Databricks, Azure, Snowflake.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="titem">
-          <div class="tcontent">
-            <h3>MBA — Business Administration</h3>
-            <small>Symbiosis International University</small>
-          </div>
-        </div>
-        <div class="titem">
-          <div class="tcontent">
-            <h3>BE — Electrical & Communications</h3>
-            <small>Gujarat Technological University</small>
-          </div>
-        </div>
+        <div class="titem"><div class="tcontent"><h3>MS — Business Analytics</h3><small>DePaul University · 2024 — 2025</small></div></div>
+        <div class="titem"><div class="tcontent"><h3>MBA — Business Administration</h3><small>Symbiosis International University</small></div></div>
+        <div class="titem"><div class="tcontent"><h3>BE — Electrical & Communications</h3><small>Gujarat Technological University</small></div></div>
       </div>
     </section>
 
@@ -260,10 +246,7 @@
     function sendMail(e){
       e.preventDefault();
       const f=e.target;
-      const body = encodeURIComponent(`From: ${f.name.value}
-Email: ${f.email.value}
-
-${f.message.value}`);
+      const body = encodeURIComponent(`From: ${f.name.value}\nEmail: ${f.email.value}\n\n${f.message.value}`);
       location.href = `mailto:shirishpatel1611@gmail.com?subject=Portfolio%20Inquiry&body=${body}`;
     }
     document.getElementById('year').textContent=new Date().getFullYear();
