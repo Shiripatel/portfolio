@@ -1,156 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shirish Patel — Audit & Risk</title>
-  <meta name="description" content="Shirish Patel — Audit, Risk Management, Telecom Business Analyst, Data & Automation" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirish Patel | Data & Analytics Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#3b82f6; --glass: rgba(255,255,255,0.03);
-      --maxw:980px; --radius:12px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#061026 0%,var(--bg) 100%);color:#e6eef8;min-height:100vh;line-height:1.5}
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-    header{display:flex;gap:20px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;color:white;flex-shrink:0}
-    .hero h1{margin:0;font-size:1.6rem}
-    .hero p{margin:6px 0;color:var(--muted)}
-    nav{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
-    nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;font-size:0.9rem}
-    nav a:hover{background:var(--glass);color:var(--accent)}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:22px}
-    main{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
-    aside{padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;height:max-content}
-    section + section{margin-top:14px}
-    h2{margin:0 0 10px 0;font-size:1.05rem}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:0.85rem}
-    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);margin-bottom:10px}
-    .project h3{margin:0;font-size:1rem}
-    .project p{margin:6px 0;color:var(--muted);font-size:0.92rem}
-    .meta{color:var(--muted);font-size:0.85rem}
-    footer{margin-top:18px;color:var(--muted);text-align:center;font-size:0.9rem}
-    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:white;text-decoration:none;font-weight:600}
-    /* responsive */
-    @media (max-width:880px){
-      .grid{grid-template-columns:1fr; }
-      aside{order:2}
-      header{flex-direction:row;gap:12px}
-    }
+    :root{--gold:#ffcc33;--bg:#0d0d0d;--panel:#121212;--muted:#bbbbbb}
+    html{scroll-behavior:smooth}
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    body { background-color: var(--bg); color: #f5f5f5; display: flex; flex-direction: row; min-height: 100vh; }
+
+    .sidebar { width: 28%; background-color: var(--panel); padding: 30px 25px; display: flex; flex-direction: column; align-items: center; position: sticky; top: 18px; height: max-content; border-radius: 16px; margin: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+    .sidebar img { width: 160px; height: 160px; object-fit: cover; border-radius: 14px; border: 3px solid var(--gold); margin-bottom: 15px; }
+    .sidebar h2 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+    .badge { background: #222; padding: 6px 14px; border-radius: 8px; font-size: 14px; color: var(--gold); margin-bottom: 25px; }
+    .info { width: 100%; margin-bottom: 25px; }
+    .info .row { display: flex; align-items: center; margin-bottom: 14px; padding: 12px; background:#191919; border:1px solid #242424; border-radius:12px }
+    .info .row span { margin-left: 12px; font-size: 14px; color: var(--muted); }
+    .icons {display:flex;gap:10px}
+    .icons a { color: var(--muted); font-size: 14px; text-decoration: none; padding:6px 10px; border-radius:8px; background:#191919; border:1px solid #242424 }
+    .icons a:hover { color: var(--gold); border-color:#3a3a3a }
+
+    .main { width: 72%; padding: 30px 28px 80px; }
+    .navbar { position: sticky; top: 16px; display: flex; justify-content: flex-end; margin-bottom: 22px; z-index: 20; }
+    .pill { background: rgba(18,18,18,.85); border:1px solid #2a2a2a; padding:10px; border-radius:18px; backdrop-filter: blur(6px); }
+    .pill a { color: var(--muted); margin: 0 8px; text-decoration: none; font-size: 14px; padding: 6px 10px; border-radius: 10px; transition: all 0.2s; display:inline-block }
+    .pill a:hover { background-color: #222; color: var(--gold); }
+
+    section { margin-bottom: 64px; scroll-margin-top: 90px; }
+    h2 { font-size: 26px; color: #fff; margin-bottom: 16px; position: relative; }
+    h2 + .bar{width:72px;height:3px;background:var(--gold);border-radius:999px;margin:-6px 0 18px}
+    p { color: #ccc; line-height: 1.7; font-size: 15px; }
+
+    .timeline{position:relative;padding-left:36px}
+    .timeline:before{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:#2a2a2a}
+    .titem{position:relative;margin-bottom:22px;padding:16px;border:1px solid #232323;background:#151515;border-radius:14px}
+    .titem:before{content:"";position:absolute;left:-28px;top:18px;width:12px;height:12px;background:var(--gold);border-radius:50%;box-shadow:0 0 0 4px rgba(255,204,51,.15)}
+    .titem h3{font-size:16px;margin:0 0 4px}
+    .titem small{color:#999}
+    .titem ul{margin-top:8px;padding-left:18px;color:#cfcfcf}
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{padding:16px;border:1px solid #232323;background:#151515;border-radius:14px}
+    .card h3{font-size:16px;margin-bottom:4px}
+    .mono{font-family:ui-monospace,Menlo,Consolas,monospace;color:#bfbfbf;font-size:13px}
+
+    form label{font-size:14px;color:#ddd}
+    input,textarea{width:100%;margin-top:6px;margin-bottom:12px;padding:12px;border-radius:10px;border:1px solid #2a2a2a;background:#121212;color:#eee}
+    button{padding:10px 14px;border-radius:10px;border:1px solid #4a3a10;background:#1a1a1a;color:#ffd463;cursor:pointer}
+    button:hover{filter:brightness(1.1)}
+
+    @media(max-width:1100px){body{flex-direction:column}.sidebar{width:auto;margin:16px}.main{width:auto;padding:20px}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="avatar" aria-hidden="true">SP</div>
-      <div class="hero">
-        <h1>Shirish Patel</h1>
-        <p>Audit & Risk Management • Telecom Business Analyst • Data & Automation</p>
-        <nav aria-label="Primary">
-          <a href="#about">Bio</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-        </nav>
-      </div>
-    </header>
 
-    <div class="grid" role="region">
-      <main id="main-column">
-        <section id="about" aria-labelledby="about-heading">
-          <h2 id="about-heading">About Me</h2>
-          <p style="color:var(--muted)">
-            <!-- Replace this placeholder text with your short bio (2–3 sentences). -->
-            I’m an audit & risk professional with experience in ERP reviews, SOX, telecom billing and revenue assurance. I apply data analytics and automation to improve controls, accuracy, and operational efficiency.
-          </p>
-          <p><a class="btn" href="resume.pdf" download>Download Resume (PDF)</a></p>
+  <aside class="sidebar">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Shirish Patel">
+    <h2>Shirish Patel</h2>
+    <div class="badge">Data & Analytics · SOX · Supply Chain</div>
 
-          <section id="projects">
-            <h2>Projects</h2>
-            <article class="project">
-              <h3>Revenue Assurance — Billing Reconciliation</h3>
-              <p class="meta">Telecom | Python, SQL, Excel | Link: <a href="#" style="color:var(--accent)">repo / demo</a></p>
-              <p>Automated billing vs. usage reconciliation reducing monthly leakage and manual effort.</p>
-            </article>
-
-            <article class="project">
-              <h3>ERP Controls Automation</h3>
-              <p class="meta">Finance Controls | Data Validation</p>
-              <p>Designed automated tests for AP/AR/GL that cut sampling time and improved audit coverage.</p>
-            </article>
-          </section>
-        </section>
-
-        <section id="experience">
-          <h2>Experience</h2>
-          <div class="project">
-            <h3>Senior Audit & Risk Analyst — Company Name</h3>
-            <p class="meta">2021 — Present</p>
-            <p class="meta">Key: SOX testing, ERPs, automation, telecom billing reviews.</p>
-          </div>
-          <div class="project">
-            <h3>Audit Consultant — Firm Name</h3>
-            <p class="meta">2017 — 2021</p>
-            <p class="meta">Conducted internal audits, process redesign, and data analytics engagements.</p>
-          </div>
-        </section>
-
-        <section id="education">
-          <h2>Education</h2>
-          <p class="meta">Degree, University — Year</p>
-        </section>
-      </main>
-
-      <aside aria-label="Sidebar">
-        <section id="skills">
-          <h2>Skills</h2>
-          <div class="skills">
-            <span class="chip">SOX</span>
-            <span class="chip">ERP Controls</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Python</span>
-            <span class="chip">Data Analytics</span>
-            <span class="chip">Revenue Assurance</span>
-            <span class="chip">Power BI</span>
-          </div>
-        </section>
-
-        <section id="contact" style="margin-top:12px">
-          <h2>Contact</h2>
-          <p class="meta">GitHub: <a href="https://github.com/yourusername" style="color:var(--accent)">yourusername</a></p>
-          <p class="meta">LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" style="color:var(--accent)">yourprofile</a></p>
-          <p class="meta">Email: <a href="mailto:you@example.com" style="color:var(--accent)">you@example.com</a></p>
-        </section>
-
-        <section id="interests" style="margin-top:12px">
-          <h2>Interests</h2>
-          <p class="meta">Data Science · Automation · Machine Learning · Prompt Engineering</p>
-        </section>
-      </aside>
+    <div class="info">
+      <div class="row">📧 <span>shirishpatel1611@gmail.com</span></div>
+      <div class="row">📞 <span>+1 (872) 288‑4166</span></div>
+      <div class="row">🎓 <span>MS Business Analytics — DePaul</span></div>
+      <div class="row">📍 <span>New York, NY, USA</span></div>
     </div>
 
-    <footer>
-      © <span id="year"></span> Shirish Patel — Built for GitHub Pages
-    </footer>
-  </div>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/shirish1611/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/shirish1611" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:shirishpatel1611@gmail.com">Email</a>
+      <a href="#" onclick="window.open('https://www.linkedin.com/in/shirish1611/','_blank');return false;">View LinkedIn Profile</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <nav class="navbar">
+      <div class="pill">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Organizations</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="bar"></div>
+      <p>Consultant turned data/analytics leader with 9+ years across Deloitte, Protiviti, and Grant Thornton. I deliver KPI dashboards, SOX/ITGC analytics, and ERP‑enabled operating models across Finance and Supply Chain. Currently completing an MS in Business Analytics at DePaul (’25), focusing on data engineering with Databricks/Azure and Microsoft Fabric.</p>
+      <p>Tooling: SQL, Python, Power BI, Tableau, SAP S/4HANA, Oracle Cloud ERP, Snowflake, Databricks, Azure.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="bar"></div>
+      <div class="timeline">
+        <div class="titem">
+          <h3>DePaul University — MS, Business Analytics</h3>
+          <small>2024 — 2025 · Finance & Supply Chain focus</small>
+          <ul>
+            <li>Graduate projects: Blue Demon Engagement Survey analytics; FSL Council insights dashboard.</li>
+            <li>Tech stack: Python, SQL, Power BI/Tableau, Databricks, Azure, Snowflake.</li>
+          </ul>
+        </div>
+        <div class="titem">
+          <h3>Professional Development & Certifications</h3>
+          <small>Ongoing</small>
+          <ul>
+            <li>CISA & CIA exam prep; SOX/ITGC specialization (COSO, COBIT, PCAOB).</li>
+            <li>Microsoft Fabric (DP‑600/DP‑700), Databricks Fundamentals, AWS Cloud Practitioner.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="bar"></div>
+      <div class="timeline">
+        <div class="titem">
+          <h3>Deloitte — Manager, Digital Transformation & Analytics</h3>
+          <small>Aug 2021 — Jan 2025</small>
+          <ul>
+            <li>Built workforce cost & capacity models; automated KPI packs for CFO/CHRO.</li>
+            <li>Designed SOX/ITGC analytics (access, SOD, invoice duplicates, vendor advances) with exportable RCMs.</li>
+            <li>Led L3 process blueprinting (Plan→Procure→Retire) and ERP rollouts (SAP/Oracle).</li>
+          </ul>
+        </div>
+        <div class="titem">
+          <h3>Protiviti / Grant Thornton — Consultant</h3>
+          <small>2017 — 2021</small>
+          <ul>
+            <li>Revenue assurance and IFRS‑16 reconciliations for multi‑entity groups.</li>
+            <li>Audit data analytics and control testing acceleration (SQL/Python/BI).</li>
+            <li>Supported inventory and supply‑chain transformations across Africa/EU.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>Organizations & Achievements</h2>
+      <div class="bar"></div>
+      <div class="timeline">
+        <div class="titem">
+          <h3>HackWithChicago 2025 — Winner</h3>
+          <small>Predictive maintenance using Databricks + Azure</small>
+        </div>
+        <div class="titem">
+          <h3>DePaul Analytics Initiatives</h3>
+          <small>Blue Demon Engagement · FSL Council analytics</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="bar"></div>
+      <div class="grid">
+        <article class="card">
+          <h3>Predictive Maintenance — Reyes Fleet</h3>
+          <p>Databricks + Azure; telematics features; downtime reduction dashboard.</p>
+          <div class="mono">Repo: <a href="#">add‑github‑link</a></div>
+        </article>
+        <article class="card">
+          <h3>SOX/ITGC Analytics Toolkit</h3>
+          <p>Access reviews, SOD, duplicate invoices & vendor advances with exportable RCMs.</p>
+          <div class="mono">Repo: <a href="#">add‑github‑link</a></div>
+        </article>
+        <article class="card">
+          <h3>Real‑Time ESG Dashboard</h3>
+          <p>Streaming KPIs (carbon, water, waste) with alerting; exec scorecards & drilldowns.</p>
+          <div class="mono">Repo: <a href="#">add‑github‑link</a></div>
+        </article>
+        <article class="card">
+          <h3>Workforce Planning & Budgeting Model</h3>
+          <p>Cost & capacity scenarios for post‑merger orgs; driver‑based modeling.</p>
+          <div class="mono">Repo: <a href="#">add‑github‑link</a></div>
+        </article>
+        <article class="card">
+          <h3>Blockchain‑Enabled Inventory — Vodafone (Case)</h3>
+          <p>Concept blueprint for joined‑up inventory across partners; transparency & on‑demand connectivity.</p>
+          <div class="mono">Write‑up: <a href="#">add‑doc‑link</a></div>
+        </article>
+        <article class="card">
+          <h3>No‑Code AI Agent for Lease Analysis</h3>
+          <p>Snowflake + LLM to extract key clauses and payment terms; export to BI.</p>
+          <div class="mono">Repo: <a href="#">add‑github‑link</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="bar"></div>
+      <form onsubmit="sendMail(event)">
+        <label>Name<input name="name" required placeholder="Your name"></label>
+        <label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
+        <label>Message<textarea name="message" rows="4" required placeholder="How can I help?"></textarea></label>
+        <button type="submit">Send Message</button>
+        <p class="mono">This will open your email app (mailto:).</p>
+      </form>
+    </section>
+
+    <footer class="mono" style="color:#9d9d9d">© <span id="year"></span> Shirish Patel · GitHub Pages</footer>
+  </main>
 
   <script>
-    // small script: set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // smooth scroll for nav links
-    document.querySelectorAll('nav a').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-      });
-    });
+    function sendMail(e){
+      e.preventDefault();
+      const f=e.target;
+      const body = encodeURIComponent(`From: ${f.name.value}\nEmail: ${f.email.value}\n\n${f.message.value}`);
+      location.href = `mailto:shirishpatel1611@gmail.com?subject=Portfolio%20Inquiry&body=${body}`;
+    }
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
-
